@@ -1,7 +1,7 @@
-import config from "./src/constants/config.js";
+import config from "./constants/config.js"
 import express from "express";
 import cors from "cors";
-import {homeRouter} from "./src/router/home-routers.js"
+import {homeRouter} from "./router/home-routers.js"
 
 console.log(config)
 const { port } = config;

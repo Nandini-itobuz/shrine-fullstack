@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.carousel-container {
+    width: 100%;
+    aspect-ratio: 2/2;
+  }
+  .carousel-item {
+    width: 100%;
+    aspect-ratio: 2/2;
+    display: block;
+  }
+  .carousel-item img {
+    width: 100%;
+    aspect-ratio: 2/2;
+    object-fit: cover;
+  }
+
+  .all-buttons{
+    &:hover{
+      background-color: #c0304f;
+      color: white;
+    }
+  }
+
+  .carousal-btn{
+    button:first-child{
+      width: 6rem;
+      aspect-ratio: 2/1;
+      img{
+        width: 10%;
+      }
+    }
+
+    button:last-child{
+      width: 6rem;
+      aspect-ratio: 2/1;
+      img{
+        width: 10%;
+        
+      }
+    }
+  }
+
+  
+
+
+  @media (min-width:768px) {
+    .carousel-container {
+        aspect-ratio: 5/2;
+      }
+      .carousel-item {
+        aspect-ratio: 5/2;
+      }
+      .carousel-item img {
+        aspect-ratio: 5/2;
+      }
+    
+      .carousal-btn{
+        position: absolute;
+        left: 85%;
+        top:25%
+      }
+    
+  }
+
+  
+

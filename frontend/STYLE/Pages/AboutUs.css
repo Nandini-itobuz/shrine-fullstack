@@ -1,0 +1,42 @@
+.stats-church {
+  background-color: #ffe6e0;
+}
+
+.walking-cards {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #ffe6e0;
+}
+
+.about-church div:first-child {
+  background: url("../../Asserts/image/pages/about-us/one.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.about-church div:nth-child(2) {
+  background: url("../../Asserts/image/pages/about-us/two.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.about-church div:last-child {
+  background: url("../../Asserts/image/pages/about-us/three.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.prayer-stats {
+  width: 7rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #c0304f;
+  border: 5px solid white;
+  left: 62%;
+  bottom: 5%;
+}
+
+@media (min-width: 768px) {
+  .prayer-stats {
+    width: 10rem;
+    left: 75%;
+    bottom: 5%;
+  }
+}/*# sourceMappingURL=AboutUs.css.map */

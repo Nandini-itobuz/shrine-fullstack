@@ -11,25 +11,26 @@ export function memberData (req,res){
     res.status(StatusCodes.OK).json({
         yourMemebersObj: [
           {
-            img: "./image/home-page/your-members/vonda.png",
+            img: "../../../FrontEnd/Asserts/image/home-page/your-members/vonda.png",
             memName: "Vonda Sanders",
             memSubname: "Sir Gerry Serrano",
           },
           {
-            img: "./image/home-page/your-members/ronnie.png",
+            img: "../../../FrontEnd/Asserts/image/home-page/your-members/ronnie.png",
             memName: "Ronnie Ferrell",
             memSubname: "Sir Gerry Serrano",
           },
           {
-            img: "./image/home-page/your-members/lori.png",
+            img: "../../../FrontEnd/Asserts/image/home-page/your-members/lori.png",
             memName: "Lori Vega",
             memSubname: "Sir Gerry Serrano",
           },
           {
-            img: "./image/home-page/your-members/annie.png",
+            img: "../../../FrontEnd/Asserts/image/home-page/your-members/annie.png",
             memName: "Annie Trevino",
             memSubname: "Sir Gerry Serrano",
           },
+          
         ],
         status: 200
       });
@@ -39,46 +40,46 @@ export function articleData(req,res){
     res.status(StatusCodes.OK).json({
         articleCarousalObj: [
           {
-            url: "./image/home-page/articles/brown-church.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/articles/brown-church.png",
             churchName: "Baptism Sunday of church",
             churchDes:
               "Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
-            peopleImg: "./image/home-page/articles/blue-girl.png"
+            peopleImg: "../../../FrontEnd/Asserts/image/home-page/articles/blue-girl.png"
           },
           {
-            url: "./image/home-page/articles/brown-church.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/articles/brown-church.png",
             churchName: "Baptism Sunday of church",
             churchDes:
               "Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
-            peopleImg: "./image/home-page/articles/blue-girl.png"
+            peopleImg: "../../../FrontEnd/Asserts/image/home-page/articles/blue-girl.png"
           },
           {
-            url: "./image/home-page/articles/brown-church.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/articles/brown-church.png",
             churchName: "Baptism Sunday of church",
             churchDes:
               "Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
-            peopleImg: "./image/home-page/articles/blue-girl.png"
+            peopleImg: "../../../FrontEnd/Asserts/image/home-page/articles/blue-girl.png"
           },
           {
-            url: "./image/home-page/articles/brown-church.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/articles/brown-church.png",
             churchName: "Baptism Sunday of church",
             churchDes:
               "Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
-            peopleImg: "./image/home-page/articles/blue-girl.png"
+            peopleImg: "../../../FrontEnd/Asserts/image/home-page/articles/blue-girl.png"
           },
           {
-            url: "./image/home-page/articles/brown-church.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/articles/brown-church.png",
             churchName: "Baptism Sunday of church",
             churchDes:
               "Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
-            peopleImg: "./image/home-page/articles/blue-girl.png"
+            peopleImg: "../../../FrontEnd/Asserts/image/home-page/articles/blue-girl.png"
           },
           {
-            url: "./image/home-page/articles/brown-church.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/articles/brown-church.png",
             churchName: "Baptism Sunday of church",
             churchDes:
               "Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
-            peopleImg: "./image/home-page/articles/blue-girl.png"
+            peopleImg: "../../../FrontEnd/Asserts/image/home-page/articles/blue-girl.png"
           },
         ],
         status: 200
@@ -92,7 +93,7 @@ export function eventData(req,res){
             date: "24.12.2023-28.12.2023",
             place: "Russian Federation St. Peter’s Church",
             time: "4:38-8:24",
-            url: "./image/home-page/events/orange.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/events/orange.png",
             eventName: "Mindfulness meditation",
             eventDes:
               "A long established fact that a reader will be distracted by the readable content of...",
@@ -101,7 +102,7 @@ export function eventData(req,res){
             date: "24.12.2023-28.12.2023",
             place: "Russian Federation St. Peter’s Church",
             time: "4:38-8:24",
-            url: "./image/home-page/events/orange.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/events/orange.png",
             eventName: "Mindfulness meditation",
             event_des:
               "A long established fact that a reader will be distracted by the readable content of...",
@@ -110,7 +111,7 @@ export function eventData(req,res){
             date: "24.12.2023-28.12.2023",
             place: "Russian Federation St. Peter’s Church",
             time: "4:38-8:24",
-            url: "./image/home-page/events/orange.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/events/orange.png",
             eventName: "Mindfulness meditation",
             event_des:
               "A long established fact that a reader will be distracted by the readable content of...",
@@ -119,7 +120,7 @@ export function eventData(req,res){
             date: "24.12.2023-28.12.2023",
             place: "Russian Federation St. Peter’s Church",
             time: "4:38-8:24",
-            url: "./image/home-page/events/orange.png",
+            url: "../../../FrontEnd/Asserts/image/home-page/events/orange.png",
             eventName: "Mindfulness meditation",
             event_des:
               "A long established fact that a reader will be distracted by the readable content of...",

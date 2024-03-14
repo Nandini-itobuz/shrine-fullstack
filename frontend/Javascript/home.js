@@ -1,21 +1,3 @@
-// let articleurl = `http://localhost:8081/article`;
-// const articleObjRaw = await fetch(articleurl);
-// const articleCarousalData = await articleObjRaw.json();
-// const {articleCarousalObj} = articleCarousalData;
-
- 
-// let memberurl = `http://localhost:8081/member`;
-// const membereObjRaw = await fetch(memberurl);
-// const yourMemebersData = await membereObjRaw.json();
-// const {yourMemebersObj} = yourMemebersData;
-
-
-// let eventurl = `http://localhost:8081/events`;
-// const eventObjRaw = await fetch(eventurl);
-// const eventObjData = await eventObjRaw.json();
-// const{eventObj} = eventObjData;
-
-
 async function fetchData(url){
     try{
         const rawData = await fetch(url);
@@ -44,8 +26,6 @@ const eventCarousal = document.querySelector(".event-carousal");
 const subscribeToChurch = document.getElementById("subscribe-to-church");
 const subscribeChurchInput = document.getElementById('subscribe-church-input');
 const subscribeCheckInput =  document.getElementById('subscribe-check-input');
-
-
 
 
 let trans = 33;
@@ -96,7 +76,7 @@ function yourMemebers(memberImg, memberName, memberSubname) {
     node7.appendChild(node8);
 
     let node9 = document.createElement("IMG");
-    node9.setAttribute("src", "./image/home-page/your-members/share.png");
+    node9.setAttribute("src", "./Asserts/image/home-page/your-members/share.png");
     node8.appendChild(node9);
 
     let node10 = document.createElement("SPAN");
@@ -131,7 +111,6 @@ function createElements(elementName, obj, parentElement){
     }
     return node;
 }
-
 
 
 function createArticleCarousal(churchImg, articleHead, articleBody, userImg) {
@@ -184,7 +163,7 @@ function eventNode(url, eventDate, eventPlace, eventTime, eventName, eventDes) {
     event6.appendChild(event7);
 
     let event8 = document.createElement("IMG");
-    event8.setAttribute("src", "./image/home-page/events/calendar.png");
+    event8.setAttribute("src", "./Asserts/image/home-page/events/calendar.png");
     event8.setAttribute("class", "me-3 my-1");
     event7.appendChild(event8);
 
@@ -197,7 +176,7 @@ function eventNode(url, eventDate, eventPlace, eventTime, eventName, eventDes) {
     event6.appendChild(event11);
 
     let event12 = document.createElement("IMG");
-    event12.setAttribute("src", "./image/home-page/events/home.png");
+    event12.setAttribute("src", "./Asserts/image/home-page/events/home.png");
     event12.setAttribute("class", "me-3 my-1");
     event11.appendChild(event12);
 
@@ -210,7 +189,7 @@ function eventNode(url, eventDate, eventPlace, eventTime, eventName, eventDes) {
     event6.appendChild(event15);
 
     let event16 = document.createElement("IMG");
-    event16.setAttribute("src", "./image/home-page/events/clock.png");
+    event16.setAttribute("src", "./Asserts/image/home-page/events/clock.png");
     event16.setAttribute("class", "me-3 my-1");
     event15.appendChild(event16)
 

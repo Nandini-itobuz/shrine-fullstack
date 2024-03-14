@@ -62,13 +62,13 @@
 }
 
 .faithful-hearts {
-  background-image: url("./image/home-page/faithful-hearts/bible-book-bg.png");
+  background-image: url("../Asserts/image/home-page/faithful-hearts/bible-book-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .potential-about-blog {
-  background-image: url("./image/home-page/potential-about/fort-bg.png");
+  background-image: url("../Asserts/image/home-page/potential-about/fort-bg.png");
   background-repeat: no-repeat;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .growing-stronger-bg {
-  background-image: url("./image/home-page/growing-stronger/stronger-bg.png");
+  background-image: url("../Asserts/image/home-page/growing-stronger/stronger-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -151,7 +151,7 @@
 }
 
 .footer-sec {
-  background-image: url("../image/home-page/footer/footer.png");
+  background-image: url("../Asserts/image/home-page/footer/footer.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top right;
@@ -176,6 +176,9 @@
 }
 
 @media (min-width: 576px) {
+  .content-family {
+    font-size: 14px;
+  }
   .the-lord-main .customer-review .client-review-img {
     width: 40%;
   }
@@ -185,7 +188,11 @@
     padding: 0 7% !important;
   }
   .content-family {
-    font-size: 14px;
+    font-size: 0.9rem;
+  }
+  .heading-text {
+    font-weight: 600;
+    font-size: 34px;
   }
   .the-lord-main .the-lord-section .the-lord-img {
     height: 25rem;
@@ -199,7 +206,6 @@
 }
 @media (min-width: 992px) {
   .heading-text {
-    font-family: Roboto Serif;
     font-weight: 600;
     font-size: 38px;
     width: 90%;
