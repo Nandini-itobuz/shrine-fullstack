@@ -6,3 +6,4 @@ homeRouter.route('/member').get(memberData);
 homeRouter.route('/article').get(articleData);
 homeRouter.route('/events').get(eventData);
 homeRouter.route('/subscribe').post(subscribes)
+

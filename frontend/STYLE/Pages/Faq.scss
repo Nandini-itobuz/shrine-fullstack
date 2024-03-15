@@ -44,7 +44,32 @@
     }
   }
 
+  button.accordion-button{
   
+    &:not(.collapsed){
+      background-color: white !important;
+      color: black !important;
+    }
+
+    &:focus{
+    color: black;
+    background-color: white;
+    box-shadow: none;
+    outline: none;
+    }
+    
+    &::after{
+      rotate: 180deg !important;
+    }
+
+    
+}
+
+.accordion-index{
+  border: 1px solid rgb(182, 178, 178);
+  color: black;
+}
+
 
 
   @media (min-width:768px) {
