@@ -1,0 +1,11 @@
+[
+    {"imgUrl": "../Asserts/image/pages/gallery/container.png", "type" : "donation"},
+    {"imgUrl": "../Asserts/image/pages/gallery/red-man.png", "type" : "charity"},
+    {"imgUrl": "../Asserts/image/pages/gallery/candle.png", "type" : "charity"},
+    {"imgUrl": "../Asserts/image/pages/gallery/fathers.png", "type" : "education"},
+    {"imgUrl": "../Asserts/image/pages/gallery/cloth.png", "type" : "donation"},
+    {"imgUrl": "../Asserts/image/pages/gallery/church-benches.png", "type" : "church"},
+    {"imgUrl": "../Asserts/image/pages/gallery/baby.png", "type" : "education"},
+    {"imgUrl": "../Asserts/image/pages/gallery/rose.png", "type" : "education"},
+    {"imgUrl": "../Asserts/image/pages/gallery/church-tree.png", "type" : "church"}       
+]

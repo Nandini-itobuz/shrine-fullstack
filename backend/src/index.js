@@ -5,10 +5,10 @@ import {homeRouter} from "./router/home-routers.js"
 import { aboutUsRouter } from "./router/PagesRouters/AboutUsRouters.js";
 import { faqRouter } from "./router/PagesRouters/FaqRouters.js";
 import {carousalImageRouter} from "./router/CarousalImageRouter.js"
+import { galleryRouter } from "./router/PagesRouters/GalleryRouters.js";
+import eventRouter from './router/PagesRouters/EventsRouter.js'
 
-console.log(config)
 const { port } = config;
-
 
 const app = express();
 app.use(express.json())
@@ -17,6 +17,8 @@ app.use('/',homeRouter)
 app.use('/aboutus',aboutUsRouter)
 app.use('/faq',faqRouter)
 app.use('/images',carousalImageRouter);
+app.use('/gallery',galleryRouter)
+app.use('/currentevent',eventRouter);
 
 app.listen(port, () => {
   console.log(`listing to port ${port}`);

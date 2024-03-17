@@ -164,7 +164,7 @@ function createEventNode(
 ) {
     const parentDiv = createElements("div", {
         class: "card mb-4  p-0",
-        style: "max-width: 540px;",
+        style: "max-width: 23rem;",
     });
     const parentWrapperDiv = createElements(
         "div",
@@ -173,7 +173,7 @@ function createEventNode(
     );
     const imgWrapperDiv = createElements(
         "div",
-        { class: "col-4" },
+        { class: "col-12" },
         parentWrapperDiv
     );
     const eventImg = createElements(
@@ -183,7 +183,7 @@ function createEventNode(
     );
     const cardBodyMainDiv = createElements(
         "div",
-        { class: "col-8" },
+        { class: "col-12" },
         parentWrapperDiv
     );
     const cadrBodyDiv = createElements(
@@ -191,7 +191,7 @@ function createEventNode(
         { class: "card-body" },
         cardBodyMainDiv
     );
-    const dateSupportDiv = createElements("div", cadrBodyDiv);
+    const dateSupportDiv = createElements("div",{}, cadrBodyDiv);
     const calenderImg = createElements(
         "img",
         {
@@ -206,7 +206,7 @@ function createEventNode(
         dateSupportDiv
     );
     dateSpan.textContent = eventDate;
-    const placeSupportDiv = createElements("div", cadrBodyDiv);
+    const placeSupportDiv = createElements("div",{}, cadrBodyDiv);
     const placeImg = createElements(
         "img",
         { src: "./Asserts/image/home-page/events/home.png", class: "me-3 my-1" },
@@ -218,7 +218,7 @@ function createEventNode(
         placeSupportDiv
     );
     placeSpan.textContent = eventPlace;
-    const timeSupportDiv = createElements("div", cadrBodyDiv);
+    const timeSupportDiv = createElements("div", {},cadrBodyDiv);
     const timeImg = createElements(
         "img",
         { src: "./Asserts/image/home-page/events/clock.png", class: "me-3 my-1" },
@@ -252,7 +252,7 @@ function createEventNode(
     return parentDiv;
 }
 
-yourMemebersObj.forEach((element) => {
+yourMemebersObj.slice(0,4).forEach((element) => {
     membersSection.appendChild(
         createYourMemebers(element.img, element.memName, element.memSubname)
     );

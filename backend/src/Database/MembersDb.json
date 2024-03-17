@@ -1,21 +1,31 @@
 [
     {
-      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/vonda.png",
+      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/member-id-one.png",
       "memName": "Vonda Sanders",
       "memSubname": "Sir Gerry Serrano"
     },
     {
-      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/ronnie.png",
+      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/member-id-two.png",
       "memName": "Ronnie Ferrell",
       "memSubname": "Sir Gerry Serrano"
     },
     {
-      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/lori.png",
+      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/member-id-three.png",
       "memName": "Lori Vega",
       "memSubname": "Sir Gerry Serrano"
     },
     {
-      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/annie.png",
+      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/member-id-four.png",
+      "memName": "Annie Trevino",
+      "memSubname": "Sir Gerry Serrano"
+    },
+    {
+      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/member-id-five.png",
+      "memName": "Annie Trevino",
+      "memSubname": "Sir Gerry Serrano"
+    },
+    {
+      "img": "../../../FrontEnd/Asserts/image/home-page/your-members/member-id-six.png",
       "memName": "Annie Trevino",
       "memSubname": "Sir Gerry Serrano"
     }

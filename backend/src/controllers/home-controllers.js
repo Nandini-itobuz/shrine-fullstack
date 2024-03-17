@@ -5,7 +5,7 @@ import fs from 'fs';
 const  {dirname} = import.meta;
 
 const allMembersData = JSON.parse(fs.readFileSync(`${dirname}/../Database/MembersDb.json`));
-const memberDataView = allMembersData.slice(0,4);
+
 const allArticelData = JSON.parse(fs.readFileSync(`${dirname}/../Database/ArticlesDb.json`));
 const allEventData = JSON.parse(fs.readFileSync(`${dirname}/../Database/EventsDb.json`));
 const myemail = process.env.myemail;
@@ -13,7 +13,7 @@ const mypassword = process.env.mypassword;
 
 export function memberData(req, res) {
   res.status(StatusCodes.OK).json({
-    yourMemebersObj: memberDataView,
+    yourMemebersObj: allMembersData,
     status: 200
   });
 }

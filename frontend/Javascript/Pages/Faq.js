@@ -65,7 +65,7 @@ function createAccordion(ques, ans,index){
   </div>
 </div>`
 }
-s
+
 
 for (let i = 0; i < carousalArray.length; i++) {
   createCarousal(carousalArray[i]);

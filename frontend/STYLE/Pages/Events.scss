@@ -1,0 +1,27 @@
+.satisfaction-cards {
+    background: #ffe6e0;
+    border-radius: 2rem 2rem 2rem 0rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .satisfaction-cards-body {
+      div {
+        span {
+            display: inline-block !important;
+          }
+        .right-buttons {
+          width: 2rem;
+          border-radius: 50%;
+          height: 2rem;
+          color: white !important;
+          border: 1px solid white;
+          background-color: #c0304f !important;
+        }
+      }
+    }
+    &:hover {
+      background: white;
+      .card-img-center {
+        filter: invert(0%) sepia(100%) saturate(31%) hue-rotate(81deg)
+          brightness(96%) contrast(107%);
+      }
+    }
+  }

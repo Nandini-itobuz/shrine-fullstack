@@ -1,38 +1,104 @@
 [
-    {
-      "date": "24.12.2023-28.12.2023",
-      "place": "Russian Federation St. Peter’s Church",
-      "time": "4:38-8:24",
-      "url": "../../../FrontEnd/Asserts/image/home-page/events/orange.png",
-      "eventName": "Mindfulness meditation",
-      "eventDes":
-        "A long established fact that a reader will be distracted by the readable content of..."
+  {
+    "id":"1",
+    "date": "24.12.2023-28.12.2023",
+    "place": "Russian Federation St. Peter’s Church",
+    "time": "4:38-8:24",
+    "url": "../../../FrontEnd/Asserts/image/pages/events/baby-event.png",
+    "eventName": "Faithful Hearts, Boundless Grace.",
+    "eventDes": "A long established fact that a reader will be distracted by the readable content of...",
+    "briefDesc": "long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to.long established fact that a reader will be distracted.long established fact that a reader will be distracted by.",
+    "eventBrief" : {
+      "1":"worship Experience an uplifting time of worship through music, hymns, and prayers.",
+      "2":"messageListen to a powerful message from our pastor, as he shares insights and reflections on the significance of the resurrection of Jesus Christ.",
+      "3" :"fellowship :Enjoy a time of fellowship and connect with others in the community over light refreshments and snacks."
     },
-    {
-        "date": "24.12.2023-28.12.2023",
-        "place": "Russian Federation St. Peter’s Church",
-        "time": "4:38-8:24",
-        "url": "../../../FrontEnd/Asserts/image/home-page/events/orange.png",
-        "eventName": "Mindfulness meditation",
-        "eventDes":
-          "A long established fact that a reader will be distracted by the readable content of..."
-      },
-      {
-        "date": "24.12.2023-28.12.2023",
-        "place": "Russian Federation St. Peter’s Church",
-        "time": "4:38-8:24",
-        "url": "../../../FrontEnd/Asserts/image/home-page/events/orange.png",
-        "eventName": "Mindfulness meditation",
-        "eventDes":
-          "A long established fact that a reader will be distracted by the readable content of..."
-      },
-      {
-        "date": "24.12.2023-28.12.2023",
-        "place": "Russian Federation St. Peter’s Church",
-        "time": "4:38-8:24",
-        "url": "../../../FrontEnd/Asserts/image/home-page/events/orange.png",
-        "eventName": "Mindfulness meditation",
-        "eventDes":
-          "A long established fact that a reader will be distracted by the readable content of..."
-      }
-  ]
+    "eventDetailsImg" : "../Asserts/image/pages/events/sky-events.png",
+    "catagory":"Blog"
+  },
+  {
+    "id":"2",
+    "date": "24.12.2023-28.12.2023",
+    "place": "Russian Federation St. Peter’s Church",
+    "time": "4:38-8:24",
+    "url": "../../../FrontEnd/Asserts/image/pages/events/fathers-event.png",
+    "eventName": "Faithful Hearts, Boundless Grace.",
+    "eventDes": "A long established fact that a reader will be distracted by the readable content of...",
+    "briefDesc": "long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to.long established fact that a reader will be distracted.long established fact that a reader will be distracted by.",
+    "eventBrief" : {
+      "1":"worship Experience an uplifting time of worship through music, hymns, and prayers.",
+      "2":"messageListen to a powerful message from our pastor, as he shares insights and reflections on the significance of the resurrection of Jesus Christ.",
+      "3" :"fellowship :Enjoy a time of fellowship and connect with others in the community over light refreshments and snacks."
+    },
+    "eventDetailsImg" : "../Asserts/image/pages/events/house.png",
+    "catagory":"Book"
+  },
+  {
+    "id":"3",
+    "date": "24.12.2023-28.12.2023",
+    "place": "Russian Federation St. Peter’s Church",
+    "time": "4:38-8:24",
+    "url": "../../../FrontEnd/Asserts/image/pages/events/book-event.png",
+    "eventName": "Together in Faith, United in Love.",
+    "eventDes": "A long established fact that a reader will be distracted by the readable content of...",
+    "briefDesc": "long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to.long established fact that a reader will be distracted.long established fact that a reader will be distracted by.",
+    "eventBrief" : {
+      "1":"worship Experience an uplifting time of worship through music, hymns, and prayers.",
+      "2":"messageListen to a powerful message from our pastor, as he shares insights and reflections on the significance of the resurrection of Jesus Christ.",
+      "3" :"fellowship :Enjoy a time of fellowship and connect with others in the community over light refreshments and snacks."
+    },
+    "eventDetailsImg" : "../Asserts/image/pages/faq/sky.png",
+    "catagory":"Charity"
+  },
+  {
+    "id":"4",
+    "date": "24.12.2023-28.12.2023",
+    "place": "Russian Federation St. Peter’s Church",
+    "time": "4:38-8:24",
+    "url": "../../../FrontEnd/Asserts/image/pages/events/mirror-event.png",
+    "eventName": "Growing Together in God’s Word.",
+    "eventDes": "A long established fact that a reader will be distracted by the readable content of...",
+    "briefDesc": "long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to.long established fact that a reader will be distracted.long established fact that a reader will be distracted by.",
+    "eventBrief" : {
+      "1":"worship Experience an uplifting time of worship through music, hymns, and prayers.",
+      "2":"messageListen to a powerful message from our pastor, as he shares insights and reflections on the significance of the resurrection of Jesus Christ.",
+      "3" :"fellowship :Enjoy a time of fellowship and connect with others in the community over light refreshments and snacks."
+    },
+    "eventDetailsImg" : "../Asserts/image/pages/faq/jesus.png",
+    "catagory":"Creative"
+  },
+  {
+    "id":"5",
+    "date": "24.12.2023-28.12.2023",
+    "place": "Russian Federation St. Peter’s Church",
+    "time": "4:38-8:24",
+    "url": "../../../FrontEnd/Asserts/image/pages/events/cross-event.png",
+    "eventName": "Living by Faith, Guided by Grace.",
+    "eventDes": "A long established fact that a reader will be distracted by the readable content of...",
+    "briefDesc": "long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to.long established fact that a reader will be distracted.long established fact that a reader will be distracted by.",
+    "eventBrief" : {
+      "1":"worship Experience an uplifting time of worship through music, hymns, and prayers.",
+      "2":"messageListen to a powerful message from our pastor, as he shares insights and reflections on the significance of the resurrection of Jesus Christ.",
+      "3" :"fellowship :Enjoy a time of fellowship and connect with others in the community over light refreshments and snacks."
+    },
+    "eventDetailsImg" : "../Asserts/image/pages/faq/church.png",
+    "catagory":"Harry"
+  },
+  {
+    "id":"6",
+    "date": "24.12.2023-28.12.2023",
+    "place": "Russian Federation St. Peter’s Church",
+    "time": "4:38-8:24",
+    "url": "../../../FrontEnd/Asserts/image/pages/events/education-event.png",
+    "eventName": "Walking Together, Growing in Faith.",
+    "eventDes": "A long established fact that a reader will be distracted by the readable content of...",
+    "briefDesc": "long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to.long established fact that a reader will be distracted.long established fact that a reader will be distracted by.",
+    "eventBrief" : {
+      "1":"worship Experience an uplifting time of worship through music, hymns, and prayers.",
+      "2":"messageListen to a powerful message from our pastor, as he shares insights and reflections on the significance of the resurrection of Jesus Christ.",
+      "3" :"fellowship :Enjoy a time of fellowship and connect with others in the community over light refreshments and snacks."
+    },
+    "eventDetailsImg" : "../Asserts/image/pages/faq/hand-cross.png",
+    "catagory":"Portfolio"
+  }
+]
