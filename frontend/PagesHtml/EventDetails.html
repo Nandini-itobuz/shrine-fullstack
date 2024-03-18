@@ -10,7 +10,12 @@
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link href="../Style/home.css" rel="stylesheet">
 <link href="../Style/Pages/Events.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
 <body>
 
   <!-- navbar -->
@@ -69,37 +74,67 @@
     </div>
 
     <div class="row m-0">
-      <div class="col-xl-8 col-12 event-book-div">
+      <div class="col-xl-8 col-12 event-book-div order-1">
 
 
-  
 
-      </div>
+        
 
-      <div class="col-xl-4 col-12   sort-events-catagory">
+
+        </div>
+
+      <div class="col-xl-4 col-12   sort-events-catagory order-xl-2 order-3 ">
       
         <div class="border border-1 px-4 py-3 rounded-1 mt-5">
           <span class="heading-family fs-5 fw-semibold">Event Catagories</span>
-          <div class="mt-4"><img src="../Asserts/image/pages/events/folder.png" class="me-2">Church Events</div>
-        <div class="my-2" ><img src="../Asserts/image/pages/events/folder.png" class="me-2">Mother Events</div>
-        <div class="my-2"><img src="../Asserts/image/pages/events/folder.png" class="me-2">Indecent Day</div>
+          <br>
+          <button class="mt-4 border-0 border bg-transparent catagory-buttons" data-catagory = "church" ><img src="../Asserts/image/pages/events/folder.png" class="me-2">Church Events</button>
+          <br>
+        <button class="my-1 border border-0 bg-transparent catagory-buttons"data-catagory = "mother"><img src="../Asserts/image/pages/events/folder.png" class="me-2">Mother Events</button>
+        <br>
+        <button class=" border  border-0  bg-transparent catagory-buttons" data-catagory = "indecent"><img src="../Asserts/image/pages/events/folder.png" class="me-2">Indecent Day</button>
         </div>
 
-        <div class="border border-1 px-4 py-3 rounded-1 catagory-events my-3"></div>
+        <div class="border border-1 px-4 py-3 rounded-1 catagory-events my-3">
+          <span class="heading-family fs-5 fw-semibold">Feature Events</span>
+          <br>
+        </div>
 
         <div class="border border-1 px-4 py-3 rounded-1">
           <div class="heading-family fs-5 fw-semibold row gap-5 mb-3">Tags</div>
-          <button class="all-buttons bg-transparent text-black border border-1 col-5 blog "my-2  >Blog</button>
-          <button class="all-buttons bg-transparent text-black border border-1 col-5 book my-2"  >Book</button>
-          <button class="all-buttons bg-transparent text-black border border-1 col-5 charity my-2" >Charity</button>
-          <button class="all-buttons bg-transparent text-black border border-1 col-5 creative my-2"  >Creative</button>
-          <button class="all-buttons bg-transparent text-black border border-1 col-5 harry my-2"  >Harry</button>
-          <button class="all-buttons bg-transparent text-black border border-1 col-5 portfolio my-2"  >Portfolio</button>
+          <button class="all-buttons bg-transparent text-black border border-1 col-5 tags my-2" data-tags ="blog"  >Blog</button>
+          <button class="all-buttons bg-transparent text-black border border-1 col-5 tags my-2" data-tags ="book" >Book</button>
+          <button class="all-buttons bg-transparent text-black border border-1 col-5 tags my-2" data-tags ="charity" >Charity</button>
+          <button class="all-buttons bg-transparent text-black border border-1 col-5 tags my-2" data-tags ="creative" >Creative</button>
+          <button class="all-buttons bg-transparent text-black border border-1 col-5 tags my-2" data-tags ="harry" >Harry</button>
+          <button class="all-buttons bg-transparent text-black border border-1 col-5 tags my-2" data-tags ="portfolio" >Portfolio</button>
 
         
     </div>
 
 
+    </div>
+    <div class="col-xl-8 col-12 mt-xl-5 order-xl-3 order-2 ">
+      <ul class="nav nav-pills mb-3  gap-5 " id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active bg-transparent  border  border-2 border-top-0 border-start-0  border-end-0 border-bottom-0   text-black red-hover " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Location</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link bg-transparent  text-black red-hover" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Contact Details</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link bg-transparent  text-black red-hover" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Gallery</button>
+        </li>
+      </ul>
+      
+    
+      <div class="tab-content mt-3" id="pills-tabContent mt-3">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><div id="map"></div></div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div id="events-gallery" class="row"></div>
+        </div>
+      </div>  
     </div>
 
   </section>
@@ -118,7 +153,7 @@
     
         <div class="d-flex justify-content-around align-items-center gap-2 ">
           <button class="event-buttons">
-            <</button>
+            < </button>
               <button class="event-buttons">></button>
         </div>
 
@@ -127,10 +162,10 @@
           <h4 class="heading-family">A Better Building</h4>
           <p class="content-family my-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.</p>
           <div class="content-family"><input type="checkbox" class="me-2">Save my name, email, and website in this browser for the next time I comment.</div>
-         <div class="row gap-1">
+         <div class="row  justify-content-between">
           <input class="col-xl-5 col-12 p-3 rounded-2 my-3" type="text" placeholder="name">
-          <input class="col-xl-5 col-12 p-3 rounded-2 my-3" type="text" placeholder="email">
-          <textarea class="col-xl-10 col-12 border border-2 border-secondary rounded-1" rows="8"></textarea>
+          <input class="col-xl-6 col-12 p-3  rounded-2 my-3" type="text" placeholder="email">
+          <textarea class="col-xl-12 col-12 border border-2 border-secondary rounded-1" rows="8"></textarea>
          </div>
         <button class="all-buttons my-5 d-block">POST COMMENT</button>
 
@@ -226,6 +261,7 @@
 
     </div>
   </section>
+
 
 
   <script src="../Javascript/Pages/EventDetails.js" type="module"></script>

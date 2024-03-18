@@ -3,29 +3,40 @@ const catagoryCard = document.querySelector(".catagory-events");
 const eventButtons = document.querySelectorAll(".event-buttons");
 const eventWrapper = document.getElementsByClassName("event-carousal");
 const eventCarousal = document.querySelector(".event-carousal");
+const eventsCatagories = document.getElementsByClassName('catagory-buttons');
+const mainCard = document.querySelector('.event-book-div');
+const { eventObj } = await fetchData("http://localhost:8081/events");
+const currentHref= window.location.href;
+const idIndex = currentHref.indexOf('id=');
+const idSubstring = currentHref.substring(idIndex);
+const idArray = idSubstring.split('&');
+const idValue = idArray[0].split('=')[1];
+const objToDisplay = eventObj.find(ele => ele.id === idValue);
+const getGalleyTab = document.querySelector('#events-gallery');
+const { dataGallery } = await fetchData("http://localhost:8081/gallery");
+const getTags = document.getElementsByClassName('tags');
 let eventTrans = 0;
 
 
-const { eventObj } = await fetchData("http://localhost:8081/events");
 
-const currentHref= window.location.href;
-var idIndex = currentHref.indexOf('id=');
-var idSubstring = currentHref.substring(idIndex);
-var idArray = idSubstring.split('&');
-var idValue = idArray[0].split('=')[1];
+let map=L.map('map')
+function mapFun(long,lat){
+map.setView([long, lat], 15);
 
-const objRecieved = eventObj.find(ele => ele.id === idValue);
-console.log(objRecieved.eventDetailsImg)
-const createCardCatagory = createEventNode(
-    "16rem",
-    objRecieved.url,
-    objRecieved.date,
-    objRecieved.place,
-    "",
-    objRecieved.eventName,
-    ""
-)
-catagoryCard.appendChild(createCardCatagory);
+L.tileLayer('http://{s}.google.com/vt/lyrl=m&x={x}&y={y}&z={z}', {
+    maxZoom : 20,
+    subdomains :['mt0','mt1','mt2','mt3']
+}).addTo(map);
+let marker = L.marker([22.572645, 88.363892]).addTo(map);
+let circle = L.circle([22.572645, 88.363892], {
+    color: '#0000',
+    fillColor: '#f03',
+    border:'#0000',
+    fillOpacity: 0.3,
+    radius: 300
+}).addTo(map);
+
+}
 
 function createElements(elementName, obj, parentElement) {
     const node = document.createElement(elementName);
@@ -40,6 +51,7 @@ function createElements(elementName, obj, parentElement) {
     return node;
 }
 
+//sidecards
 function createEventNode(
     width,
     url,
@@ -47,7 +59,8 @@ function createEventNode(
     eventPlace,
     eventTime,
     eventName,
-    eventDes
+    eventDes,
+    buttonValue,eventDetails
 ) {
     const parentDiv = createElements("div", {
         class: "card mb-4  p-0 border-0 mt-5",
@@ -97,7 +110,7 @@ function createEventNode(
         dateSpan.textContent = eventDate;
     }
     if (eventPlace !== "") {
-        const placeSupportDiv = createElements("div", {}, cadrBodyDiv);
+        const placeSupportDiv = createElements("div", {style : "font-size: 0.8rem"}, cadrBodyDiv);
         const placeImg = createElements(
             "img",
             {
@@ -143,17 +156,20 @@ function createEventNode(
         cadrBodyDiv
     );
     eventType.textContent = eventDes;
-    const learnButton = createElements(
-        "button",
-        { class: "all-buttons" },
-        cadrBodyDiv
-    );
-    learnButton.textContent = "BOOKING NOW";
-
+    if(buttonValue !== ""){
+        const learnButton = createElements(
+            "button",
+            { class: "all-buttons" },
+            cadrBodyDiv, 
+        );
+        learnButton.textContent = buttonValue;
+        learnButton.onClick = readDetails(learnButton,eventDetails);
+    }
     return parentDiv;
 }
 
-function createCard() {
+//main card
+function createCard(objRecieved) {
     const eventFullName = createElements(
         "h2",
         { class: "col-12  heading-text" },
@@ -175,7 +191,8 @@ function createCard() {
         objRecieved.place,
         objRecieved.time,
         objRecieved.eventName,
-        objRecieved.eventDes
+        objRecieved.eventDes,
+        "BOOKING NOW"
     );
     bookEventCard.appendChild(createCardFull);
     const eventFullDescX = createElements(
@@ -200,9 +217,8 @@ function createCard() {
         createCardFull
     );
     eventFullDescFooter.textContent = objRecieved.eventDes;
+    mapFun(Number(objRecieved.coordinates.long),Number(objRecieved.coordinates.lat))
 }
-
-createCard()
 
 async function fetchData(url) {
     try {
@@ -213,96 +229,48 @@ async function fetchData(url) {
     }
 }
 
-document.querySelector(".blog").addEventListener("click", () => {
-    catagoryCard.innerHTML = "";
-    console.log(eventObj);
-    eventObj.forEach((ele) => {
-        if (ele.catagory === "Blog") {
-            const createCardCatagory = createEventNode(
-                "16rem",
-                ele.url,
-                ele.date,
-                ele.place,
-                "",
-                ele.eventName,
-                ""
-            );
-            catagoryCard.appendChild(createCardCatagory);
-        }
-    });
-});
+createCard(objToDisplay)
 
-document.querySelector(".book").addEventListener("click", () => {
-    catagoryCard.innerHTML = "";
-    eventObj.forEach((ele) => {
-        if (ele.catagory === "Book") {
-            const createCardCatagory = createEventNode(
-                "16rem",
-                ele.url,
-                ele.date,
-                ele.place,
-                "",
-                ele.eventName,
-                ""
-            );
-            catagoryCard.appendChild(createCardCatagory);
-        }
-    });
-});
+function readDetails(node,details){
+    node.addEventListener('click',()=>{
+        mainCard.innerHTML ="";
+        eventDetails.innerHTML=""
+        createCard(details)
+    })
+}
 
-document.querySelector(".charity").addEventListener("click", () => {
+function searchCatagory(catagory){
     catagoryCard.innerHTML = "";
-    eventObj.forEach((ele) => {
-        if (ele.catagory === "Charity") {
-            const createCardCatagory = createEventNode(
-                "16rem",
-                ele.url,
-                ele.date,
-                ele.place,
-                "",
-                ele.eventName,
-                ""
-            );
-            catagoryCard.appendChild(createCardCatagory);
-        }
-    });
-});
 
-document.querySelector(".harry").addEventListener("click", () => {
-    catagoryCard.innerHTML = "";
-    eventObj.forEach((ele) => {
-        if (ele.catagory === "Harry") {
-            const createCardCatagory = createEventNode(
-                "16rem",
-                ele.url,
-                ele.date,
-                ele.place,
-                "",
-                ele.eventName,
-                ""
-            );
-            catagoryCard.appendChild(createCardCatagory);
-        }
-    });
-});
+    const showCard = eventObj.find( ele => ele.catagory === catagory);
+    const createCardCatagory = createEventNode(
+        "17rem",
+        showCard.url,
+        showCard.date,
+        showCard.place,
+        "",
+        showCard.eventName,
+        "",
+        "READ DETAILS",showCard
+    );
+    
+    catagoryCard.appendChild(createCardCatagory);
+}
 
-document.querySelector(".portfolio").addEventListener("click", () => {
-    catagoryCard.innerHTML = "";
-    eventObj.forEach((ele) => {
-        if (ele.catagory === "Portfolio") {
-            const createCardCatagory = createEventNode(
-                "16rem",
-                ele.url,
-                ele.date,
-                ele.place,
-                "",
-                ele.eventName,
-                ""
-            );
-            catagoryCard.appendChild(createCardCatagory);
-        }
-    });
-});
+for(let index of eventsCatagories){
+    index.addEventListener('click',()=>{
+        searchCatagory(index.dataset.catagory);
+    })
+    
+}
+
+dataGallery.forEach((ele) => {
+    createElements(
+      "img",
+      { src: ele.imgUrl, class: "col-lg-4 col-sm-6 p-lg-3 mt-2" },
+      getGalleyTab
+    );
+  });
 
 eventObj.forEach((ele) => {
     eventCarousal.appendChild(
@@ -311,8 +279,7 @@ eventObj.forEach((ele) => {
             ele.url,
             ele.date,
             "", "",
-            ele.eventName,
-            ""
+            ele.eventName,"","",ele
         )
     );
 });

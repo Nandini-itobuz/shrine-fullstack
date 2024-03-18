@@ -10,12 +10,9 @@ async function fetchData(url) {
   }
 }
 
-function createElements(elementName, obj, parentElement,onclickFunction) {
+function createElements(elementName, obj, parentElement) {
   const node = document.createElement(elementName);
 
-  if (onclickFunction) {
-    node.addEventListener('click', onclickFunction);
-  }
   Object.entries(obj).forEach((ele) => {
     node.setAttribute(ele[0], ele[1]);
   });
@@ -79,8 +76,7 @@ function createEventNodes(
   const anchorNode = createElements(
     "a",
     { class: "btn all-buttons py-3 px-4 mt-md-4 mt-2", href: `./EventDetails.html?id=${id}`},
-    cardBodyDiv,
-    () => setEvent(eventDetails)
+    cardBodyDiv
   );
   anchorNode.textContent = "JOIN NOW";
   return parentDiv;
@@ -102,17 +98,5 @@ eventObj.forEach((ele) => {
   );
 });
 
-
-async function setEvent(eventD){
-  let emailObj = { data: eventD };
-    const response = await fetch("http://localhost:8081/currentevent", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(emailObj),
-    });
-    console.log(response);
-}
 
 

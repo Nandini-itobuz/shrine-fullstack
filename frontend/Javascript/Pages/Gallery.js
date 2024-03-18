@@ -29,7 +29,6 @@ function createElements(elementName, obj, parentElement) {
 function filterImages(parentElement, typeOfFilter, imgObjSearch) {
 
   const imgFiltered = imgObjSearch.filter((ele) => ele.type === typeOfFilter);
-  console.log(imgFiltered)
   imgFiltered.forEach((ele) => {
     createElements(
       "img",

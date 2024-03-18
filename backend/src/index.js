@@ -8,6 +8,7 @@ import {carousalImageRouter} from "./router/CarousalImageRouter.js"
 import { galleryRouter } from "./router/PagesRouters/GalleryRouters.js";
 import eventRouter from './router/PagesRouters/EventsRouter.js'
 import { videoRouter } from "./router/PagesRouters/VideoRouters.js";
+import { blogRouter } from "./router/PagesRouters/BlogRouters.js";
 
 const { port } = config;
 
@@ -21,6 +22,7 @@ app.use('/images',carousalImageRouter);
 app.use('/gallery',galleryRouter)
 app.use('/currentevent',eventRouter);
 app.use('/video',videoRouter);
+app.use('/blog',blogRouter)
 
 app.listen(port, () => {
   console.log(`listing to port ${port}`);
