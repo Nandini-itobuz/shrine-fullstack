@@ -10,12 +10,8 @@ async function fetchData(url) {
 const {dataBlog} = await fetchData("http://localhost:8081/blog")
 const getBlogSection = document.querySelector('.blog-section');
 
-function createElements(elementName, obj, parentElement,onclickFunction) {
+function createElements(elementName, obj, parentElement) {
     const node = document.createElement(elementName);
-  
-    if (onclickFunction) {
-      node.addEventListener('click', onclickFunction);
-    }
     Object.entries(obj).forEach((ele) => {
       node.setAttribute(ele[0], ele[1]);
     });
@@ -80,9 +76,18 @@ dataBlog.forEach(element =>{
 })
 
 document.getElementsByClassName('button-pagination')[1].addEventListener('click',async ()=>{
-    const {dataBlog} = await fetchData("http://localhost:8081/blog?page=2&limit=3");
+    const {dataBlog} = await fetchData("http://localhost:8081/blog?page=2&limit=4");
     getBlogSection.innerHTML = ""
     dataBlog.forEach(element =>{
         getBlogSection.prepend(createEventNodes(element.id, element.url, element.date,element.blogName,element.blogDesc, element));
     })
 })
+
+document.getElementsByClassName('button-pagination')[0].addEventListener('click',async ()=>{
+  const {dataBlog} = await fetchData("http://localhost:8081/blog?page=1&limit=6");
+  getBlogSection.innerHTML = ""
+  dataBlog.forEach(element =>{
+      getBlogSection.prepend(createEventNodes(element.id, element.url, element.date,element.blogName,element.blogDesc, element));
+  })
+})
+

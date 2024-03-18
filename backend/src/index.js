@@ -8,7 +8,7 @@ import {carousalImageRouter} from "./router/CarousalImageRouter.js"
 import { galleryRouter } from "./router/PagesRouters/GalleryRouters.js";
 import eventRouter from './router/PagesRouters/EventsRouter.js'
 import { videoRouter } from "./router/PagesRouters/VideoRouters.js";
-import { blogRouter } from "./router/PagesRouters/BlogRouters.js";
+import { blogRouter } from "./router/BlogRouters.js";
 
 const { port } = config;
 

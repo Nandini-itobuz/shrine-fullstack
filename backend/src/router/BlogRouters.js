@@ -1,5 +1,5 @@
 import express from "express"
-import {blogData, queryCheck} from '../../controllers/PagesControllers/BlogControllers.js'
+import {blogData, queryCheck} from '../controllers/BlogControllers.js'
 export const blogRouter = express.Router();
 
 blogRouter.route('/').get(queryCheck, blogData);

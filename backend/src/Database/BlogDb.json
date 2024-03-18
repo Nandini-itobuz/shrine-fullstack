@@ -1,7 +1,7 @@
 [
     {
         "id" : "1",
-        "url" :"../Asserts/image/pages/blogs/snow.png",
+        "url" :"./Asserts/image/pages/blogs/snow.png",
         "date" : "26.10.2013",
         "author":"shelton",
         "blogName" : "Building Faith, Serving Humanity.",
@@ -15,7 +15,7 @@
     },
     {
         "id" : "2",
-        "url" :"../Asserts/image/pages/blogs/prayer.png",
+        "url" :"./Asserts/image/pages/blogs/prayer.png",
         "date" : "26.10.2013",
         "author":"shelton",
         "blogName" : "Building Faith, Serving Humanity.",
@@ -29,7 +29,7 @@
     },
     {
         "id" : "3",
-        "url" :"../Asserts/image/pages/blogs/window.png",
+        "url" :"./Asserts/image/pages/blogs/window.png",
         "date" : "26.10.2013",
         "author":"shelton",
         "blogName" : "Building Faith, Serving Humanity.",
@@ -43,7 +43,7 @@
     },
     {
         "id" : "4",
-        "url" :"../Asserts/image/pages/blogs/girl-praying.png",
+        "url" :"./Asserts/image/pages/blogs/girl-praying.png",
         "date" : "26.10.2013",
         "author":"shelton",
         "blogName" : "Building Faith, Serving Humanity.",
@@ -57,7 +57,7 @@
     },
     {
         "id" : "5",
-        "url" :"../Asserts/image/pages/blogs/church.png",
+        "url" :"./Asserts/image/pages/blogs/church.png",
         "date" : "26.10.2013",
         "author":"shelton",
         "blogName" : "Building Faith, Serving Humanity.",
@@ -71,7 +71,7 @@
     },
     {
         "id" : "6",
-        "url" :"../Asserts/image/pages/blogs/statue.png",
+        "url" :"./Asserts/image/pages/blogs/statue.png",
         "date" : "26.10.2013",
         "author":"shelton",
         "blogName" : "Building Faith, Serving Humanity.",

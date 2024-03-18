@@ -9,7 +9,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<link href="../Style/home.css" rel="stylesheet">
+<link href="./Style/home.css" rel="stylesheet">
 
 <body>
 
@@ -22,16 +22,16 @@
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="#"><img src="../Asserts/image/home-page/footer/nav-logo.png" class="w-75"></a>
+        <a href="#"><img src="./Asserts/image/home-page/footer/nav-logo.png" class="w-75"></a>
       </div>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item d-flex justify-content-center align-items-center">
-            <a class="nav-link  active me-4 fw-semibold  content-family" aria-current="page" href="../index.html">HOME</a>
+            <a class="nav-link  active me-4 fw-semibold  content-family" aria-current="page" href="./index.html">HOME</a>
           </li>
           <li class="nav-item d-flex justify-content-center align-items-center">
-            <a class="nav-link  active me-4 fw-semibold  content-family" aria-current="page" href="#">PAGE</a>
+            <a class="nav-link  active me-4 fw-semibold  content-family" aria-current="page" href="./PagesHtml/AboutUs.html">PAGE</a>
           </li>
           <li class="nav-item d-flex justify-content-center align-items-center">
             <a class="nav-link  active me-4 fw-semibold  content-family" aria-current="page" href="#">BLOG</a>
@@ -40,7 +40,7 @@
             <a class="nav-link  active me-4 fw-semibold  content-family" aria-current="page" href="#">DONATION</a>
           </li>
           <li class="nav-item d-flex justify-content-center align-items-center d-none d-xl-block">
-            <a href="#"><img src="../Asserts/image/home-page/footer/nav-logo.png"></a>
+            <a href="#"><img src="./Asserts/image/home-page/footer/nav-logo.png"></a>
           </li>
 
           <li class="nav-item d-flex justify-content-center align-items-center">
@@ -52,11 +52,11 @@
 
           <li class="nav-item d-flex justify-content-center align-items-center">
             <a class="nav-link  active me-4 " aria-current="page" href="#"><img
-                src="../Asserts/image/home-page/footer/search.png"></a>
+                src="./Asserts/image/home-page/footer/search.png"></a>
           </li>
           <li class="nav-item d-flex justify-content-center align-items-center">
             <a class="nav-link  active me-4" aria-current="page" href="#"><img
-                src="../Asserts/image/home-page/footer/bag.png"></a>
+                src="./Asserts/image/home-page/footer/bag.png"></a>
           </li>
         </ul>
       </div>
@@ -65,8 +65,8 @@
   </nav>
 
   <div class="padding-section container row mx-auto my-5">
-    <img src="../Asserts/image/pages/blogs/house.png" class="col-md-8 col-12 d-md-block d-none pe-3 ps-0">
-    <img src="../Asserts/image/pages/blogs/fort.png" class="col-md-4 col-12 p-0">
+    <img src="./Asserts/image/pages/blogs/house.png" class="col-md-8 col-12 d-md-block d-none pe-3 ps-0">
+    <img src="./Asserts/image/pages/blogs/fort.png" class="col-md-4 col-12 p-0">
   </div>
  
   <div class="row m-0 justify-content-start  align-items-center p-3 padding-section container mx-auto my-5">
@@ -75,17 +75,44 @@
   </div>
 
   <!-- <img src="../Asserts/image/pages/blogs/snow.png"> -->
-  <section class="padding-section container row mx-auto ">
-    <div class="col-xl-8 col-12 blog-section row">
-
-
-        <div class="mx-auto my-5 d-flex justify-content-center gap-2 ">
-            <buttons class="all-buttons bg-transparent text-black border border-secondary px-3 tags-color button-pagination">1</buttons>
-            <buttons class="all-buttons bg-transparent text-black border border-secondary px-3 tags-color button-pagination">2</buttons>
-            <buttons class="all-buttons bg-transparent text-black border border-secondary px-3 tags-color button-pagination">></buttons>
-        </div>
+  <section class="padding-section container row mx-auto  justify-content-start">
+    <div class="col-xl-8 col-12 blog-section row order-xl-1 order-2">
     </div>
-    
+    <div class="d-flex flex-column col-xl-4 col-12 mt-5 gap-4 order-xl-2 order-1">
+
+      <div class="border border-1 border-grey p-4 rounded-2 ">
+        <p class="content-family text-black fs-5 fw-semibold">search here</p>
+        <input type="text" placeholder=" search" class="p-2 w-100 rounded-2  border border-secondary">
+      </div>
+
+      <div class="border border-1 border-grey p-4 rounded-2 ">
+        <p class="content-family text-black fs-5 fw-semibold">catagory</p>
+        <button class="border-0 border bg-transparent catagory-buttons" data-catagory = "church" ><img src="./Asserts/image/pages/events/folder.png" class="me-2">Church</button><br>
+        <button class="my-1 border border-0 bg-transparent catagory-buttons"data-catagory = "mother"><img src="./Asserts/image/pages/events/folder.png" class="me-2">chursy</button><br>
+        <button class=" border  border-0  bg-transparent catagory-buttons" data-catagory = "indecent"><img src="./Asserts/image/pages/events/folder.png" class="me-2">Hobbies</button><br>
+        <button class=" border  border-0  bg-transparent catagory-buttons" data-catagory = "indecent"><img src="./Asserts/image/pages/events/folder.png" class="me-2">Mosque</button><br>
+      </div>
+
+      <div class="border border-1 border-grey p-4 rounded-2 ">
+        <p class="content-family text-black fs-5 fw-semibold">recent posts</p>
+      </div>
+  
+      <div class="border border-1 border-grey p-4 rounded-2 ">
+        <p class="content-family text-black fs-5 fw-semibold">tags</p>
+        <button class="all-buttons px-4 py-2 mt-2 text-black bg-transparent border border-1 border-secondary">BLOG</button>
+        <button class="all-buttons px-4 py-2 mt-2 text-black bg-transparent border border-1 border-secondary">BOOK</button>
+        <button class="all-buttons px-4 py-2 mt-2 text-black bg-transparent border border-1 border-secondary">CHARITY</button>
+        <button class="all-buttons px-4 py-2 mt-2 text-black bg-transparent border border-1 border-secondary">HARRY</button>
+        <button class="all-buttons px-4 py-2 mt-2 text-black bg-transparent border border-1 border-secondary">PORTFOLIO</button>
+      </div>
+
+  
+    </div>
+    <div class="  my-4 d-flex justify-content-center  gap-2 col-8 order-3">
+      <buttons class="all-buttons bg-transparent text-black border border-secondary px-3 tags-color button-pagination">1</buttons>
+      <buttons class="all-buttons bg-transparent text-black border border-secondary px-3 tags-color button-pagination">2</buttons>
+      <buttons class="all-buttons bg-transparent text-black border border-secondary px-3 tags-color button-pagination">></buttons>
+  </div>
   </section>
 
   <!-- footer -->
@@ -93,7 +120,7 @@
 
     <div class="padding-section container mx-auto">
       <div class="row p-3 justify-content-between align-items-center">
-        <div class="col-lg-2"><img src="../Asserts/image/home-page/footer/footer-logo.png"></div>
+        <div class="col-lg-2"><img src="./Asserts/image/home-page/footer/footer-logo.png"></div>
         <p class="col-lg-5 col-12 content-family my-3">A long established fact
           that a reader will be distracted by the
           readable content of a page when looking.</p>
@@ -175,7 +202,7 @@
     </div>
   </section>
 
-  <script type="module" src="../Javascript/Pages/Blog.js"></script>
+  <script type="module" src="./Javascript/Blog.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
