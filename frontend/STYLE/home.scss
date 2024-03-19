@@ -7,6 +7,17 @@
 }
 
 /*generic-classes*/
+.blog-comments{
+  width: 60rem;
+  background-color: #ffe6e0;
+  margin: 0% 0.8rem;
+  padding: 1%;
+
+  div:first-child{
+    border-right: 0px solid #747a82;
+  }
+}
+
 .tags-color{
   &:hover{
     background-color: #c0304f !important;
@@ -72,14 +83,15 @@
       padding: 2%;
     }
   }
-  .customer-review {
-    background-color: #ffe6e0;
-    .customer-review-heading {
-      border-left: 3px solid #baa7a3;
-    }
-    .client-review-img {
-      width: 65%;
-    }
+}
+
+.customer-review {
+  background-color: #ffe6e0;
+  .customer-review-heading {
+    border-left: 3px solid #baa7a3;
+  }
+  .client-review-img {
+    width: 65%;
   }
 }
 
@@ -271,6 +283,13 @@
 }
 
 @media (min-width: 992px) {
+
+  .blog-comments{
+    div:first-child{
+      border-right: 3px solid #747a82;
+    }
+  }
+
   .heading-text {
     font-weight: 600;
     font-size: 38px;

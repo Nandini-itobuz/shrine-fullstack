@@ -7,6 +7,16 @@
 }
 
 /*generic-classes*/
+.blog-comments {
+  width: 60rem;
+  background-color: #ffe6e0;
+  margin: 0% 0.8rem;
+  padding: 1%;
+}
+.blog-comments div:first-child {
+  border-right: 0px solid #747a82;
+}
+
 .tags-color:hover {
   background-color: #c0304f !important;
   color: white !important;
@@ -69,13 +79,14 @@
   height: 18rem;
   padding: 2%;
 }
-.the-lord-main .customer-review {
+
+.customer-review {
   background-color: #ffe6e0;
 }
-.the-lord-main .customer-review .customer-review-heading {
+.customer-review .customer-review-heading {
   border-left: 3px solid #baa7a3;
 }
-.the-lord-main .customer-review .client-review-img {
+.customer-review .client-review-img {
   width: 65%;
 }
 
@@ -223,6 +234,9 @@
   }
 }
 @media (min-width: 992px) {
+  .blog-comments div:first-child {
+    border-right: 3px solid #747a82;
+  }
   .heading-text {
     font-weight: 600;
     font-size: 38px;

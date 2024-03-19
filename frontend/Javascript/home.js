@@ -301,7 +301,7 @@ eventButtons[0].addEventListener("click", (ele) => {
     eventWrapper[0].style.transition = `0.1s all ease`;
 });
 
-articleNext.addEventListener("click", (ele) => {
+articleNext.addEventListener("cçick", (ele) => {
     articleSlider.style.transform = `translateX(-${trans}%)`;
     trans += 33;
     articleSlider.style.transition = `0.3s all ease`;

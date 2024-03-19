@@ -62,7 +62,7 @@ function createEventNodes(
     eventDescDiv.textContent = eventDesc;
     const anchorNode = createElements(
       "a",
-      { class: "btn all-buttons py-3 px-4 ", href: `./BlogDetails.html?id=${id}`},
+      { class: "btn all-buttons border border-black tags-color py-3 px-4 ", href: `./BlogDetails.html?id=${id}`},
       cardBodyDiv,
       () => setEvent(eventDetails)
     );
